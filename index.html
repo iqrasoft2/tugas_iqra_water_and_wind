@@ -1,0 +1,71 @@
+
+<h1 style="text-align: center;">Mohon tunggu 15 detik untuk mengetahui perubahan informasi</h1>
+<div class="row">
+		<div class="column">
+			<div><h3>Information</h3></div>
+			<ul>
+				<li>Jika water dibawah 5 maka status aman</li>
+				<li>Jika water antara 6 - 8 maka status siaga</li>
+				<li>Jika water diatas 8 maka status bahaya</li>
+				<li>Jika wind dibawah 6 maka status aman</li>
+				<li>Jika wind antara 7 - 15 maka status siaga</li>
+				<li>Jika wind diatas 15 maka status bahaya</li>
+				<li>Value water dalam satuan meter</li>
+				<li>Value wind dalam satuan meter per detik</li>
+			</ul>
+		</div>
+		<div class="column" style="padding-top:55px;">
+				<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+					<caption style="padding-bottom:10px;"><strong>Periodic Status</strong></caption>
+					<tbody>
+						<tr>
+							<td>&nbsp;</td>
+							<td><strong>Satuan</strong></td>
+							<td><strong>Status</strong></td>
+						</tr>
+						<tr>
+							<td><strong>Water</strong></td>
+							<td>{{.Water}} m</td>
+							<td>{{.WaterStatus}}</td>
+						</tr>
+						<tr>
+							<td><strong>Wind</strong></td>
+							<td>{{.Wind}} m/s</td>
+							<td>{{.WindStatus}}</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+</div>
+
+
+ 
+<style>
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+</style>
+
+
+<script type="text/javascript">
+	window.onload = function () {
+		window.setTimeout(function () {
+			document.location.reload();
+		}, 15000);
+	};
+</script>
